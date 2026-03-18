@@ -4,328 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colégio Estadual São Cristóvão</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <span>SC</span>
-                    </div>
-                    <div class="logo-text">
-                        <h1>Colégio Estadual</h1>
-                        <p>São Cristóvão</p>
-                    </div>
-                </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="nav-desktop">
-                    <a href="#inicio" class="nav-link">Início</a>
-                    <a href="#sobre" class="nav-link">Sobre Nós</a>
-                    <a href="#cursos" class="nav-link">Cursos</a>
-                    <a href="#diferenciais" class="nav-link">Diferenciais</a>
-                    <a href="#noticias" class="nav-link">Notícias</a>
-                    <a href="#contato" class="nav-link">Contato</a>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <button class="menu-toggle" id="menuToggle">
-                    <span class="menu-icon">☰</span>
-                </button>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <div class="circle">SC</div>
+            <div>
+                <h1>Colégio Estadual</h1>
+                <p>São Cristóvão</p>
             </div>
-
-            <!-- Mobile Navigation -->
-            <nav class="nav-mobile" id="mobileNav">
-                <a href="#inicio" class="nav-link-mobile">Início</a>
-                <a href="#sobre" class="nav-link-mobile">Sobre Nós</a>
-                <a href="#cursos" class="nav-link-mobile">Cursos</a>
-                <a href="#diferenciais" class="nav-link-mobile">Diferenciais</a>
-                <a href="#noticias" class="nav-link-mobile">Notícias</a>
-                <a href="#contato" class="nav-link-mobile">Contato</a>
-            </nav>
         </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="hero-title">Bem-vindo ao Colégio Estadual São Cristóvão</h2>
-                <p class="hero-subtitle">Educação de qualidade para formar cidadãos preparados para o futuro</p>
-                <div class="hero-buttons">
-                    <a href="#contato" class="btn btn-primary">Entre em Contato</a>
-                    <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
-                </div>
+    <!-- Seção Home / Boas-vindas -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h2>Bem-vindo ao Colégio Estadual São Cristóvão</h2>
+            <p>Educação de qualidade para formar cidadãos preparados para o futuro</p>
+            <div class="buttons">
+                <button onclick="scrollToSection('contato')">Entre em Contato</button>
+                <button onclick="scrollToSection('sobre')">Saiba Mais</button>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="sobre" class="section about">
-        <div class="container">
-            <h2 class="section-title">Sobre Nós</h2>
-            
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1561346745-5db62ae43861?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGhhcHB5JTIwc2Nob29sJTIwZ3JvdXB8ZW58MXx8fHwxNzczNzcxMzQxfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Estudantes felizes">
-                </div>
-                
-                <div class="about-text">
-                    <p>O <strong>Colégio Estadual São Cristóvão</strong> é uma instituição de ensino comprometida com a excelência educacional há mais de 30 anos.</p>
-                    
-                    <p>Nossa missão é proporcionar uma educação de qualidade que desenvolva não apenas o conhecimento acadêmico, mas também valores éticos, cidadania e preparação para os desafios do mundo contemporâneo.</p>
-                    
-                    <p>Com uma equipe de professores qualificados e infraestrutura moderna, oferecemos um ambiente acolhedor e estimulante para o aprendizado de nossos alunos.</p>
-                    
-                    <p>Acreditamos que cada estudante possui potencial único e trabalhamos para desenvolver suas habilidades e talentos de forma integral.</p>
-                </div>
+    <!-- Sobre Nós -->
+    <section id="sobre" class="fade-in">
+        <h2>Sobre Nós</h2>
+        <div class="sobre-container">
+            <img src="img/aluno1.jpg" alt="Alunos estudando">
+            <div class="sobre-texto">
+                <p>O <strong>Colégio Estadual São Cristóvão</strong> é uma instituição de ensino comprometida com a excelência educacional há mais de 30 anos.</p>
+                <p>Nossa missão é oferecer educação de qualidade, desenvolvendo conhecimento acadêmico, valores éticos e cidadania.</p>
             </div>
         </div>
     </section>
 
-    <!-- Courses Section -->
-    <section id="cursos" class="section courses">
-        <div class="container">
-            <h2 class="section-title">Nossos Cursos</h2>
-            <p class="section-subtitle">Oferecemos uma educação completa e diversificada para todas as etapas do desenvolvimento estudantil</p>
-
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-icon blue">
-                        <span>📚</span>
-                    </div>
-                    <h3>Ensino Fundamental II</h3>
-                    <p>Do 6º ao 9º ano, com foco no desenvolvimento de habilidades fundamentais para a formação do aluno.</p>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-icon green">
-                        <span>🎓</span>
-                    </div>
-                    <h3>Ensino Médio</h3>
-                    <p>Preparação completa para o ENEM e vestibulares, com conteúdo atualizado e professores especializados.</p>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-icon purple">
-                        <span>👥</span>
-                    </div>
-                    <h3>Atividades Extracurriculares</h3>
-                    <p>Esportes, artes, música e projetos culturais para desenvolvimento integral dos estudantes.</p>
-                </div>
+    <!-- Cursos -->
+    <section id="cursos" class="fade-in">
+        <h2>Nossos Cursos</h2>
+        <div class="cursos-container">
+            <div class="curso-card">
+                <div class="icon">&#128218;</div>
+                <h3>Ensino Fundamental II</h3>
+                <p>Do 6º ao 9º ano, com foco no desenvolvimento de habilidades fundamentais para a formação do aluno.</p>
             </div>
+            <div class="curso-card">
+                <div class="icon">&#127891;</div>
+                <h3>Ensino Médio</h3>
+                <p>Preparação completa para ENEM e vestibulares, com conteúdo atualizado e professores especializados.</p>
+            </div>
+            <div class="curso-card">
+                <div class="icon">&#128101;</div>
+                <h3>Atividades Extracurriculares</h3>
+                <p>Esportes, artes, música e projetos culturais para desenvolvimento integral dos estudantes.</p>
+            </div>
+        </div>
 
-            <div class="courses-image">
-                <img src="https://images.unsplash.com/photo-1722912010170-704c382ca530?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoJTIwc2Nob29sJTIwc3R1ZGVudHMlMjBzdHVkeWluZyUyMHRvZ2V0aGVyfGVufDF8fHx8MTc3Mzc3MTM0MXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Estudantes estudando juntos">
+        <!-- Carrossel de Imagens -->
+        <div class="carousel">
+            <img src="img/aluno2.jpg" alt="Alunos em atividades" class="carousel-img active">
+            <img src="img/aluno3.jpg" alt="Alunos em sala de aula" class="carousel-img">
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="fade-in">
+        <h2>Nossos Diferenciais</h2>
+        <p>O que torna o Colégio São Cristóvão especial e único</p>
+        <div class="diferenciais-container">
+            <div class="diferencial">
+                <div class="icon">&#128421;</div>
+                <h3>Tecnologia em Sala de Aula</h3>
+                <p>Recursos tecnológicos modernos para tornar o aprendizado mais dinâmico e interativo.</p>
+            </div>
+            <div class="diferencial">
+                <div class="icon">&#128161;</div>
+                <h3>Projetos Interdisciplinares</h3>
+                <p>Integração entre diferentes disciplinas através de projetos que conectam teoria e prática.</p>
+            </div>
+            <div class="diferencial">
+                <div class="icon">&#127919;</div>
+                <h3>Foco no Desenvolvimento de Habilidades</h3>
+                <p>Desenvolvemos habilidades socioemocionais, pensamento crítico e capacidade de resolver problemas.</p>
             </div>
         </div>
     </section>
 
-    <!-- Differentials Section -->
-    <section id="diferenciais" class="section differentials">
-        <div class="container">
-            <h2 class="section-title">Nossos Diferenciais</h2>
-            <p class="section-subtitle">O que torna o Colégio São Cristóvão especial e único</p>
-
-            <div class="differentials-grid">
-                <div class="differential-image">
-                    <img src="https://images.unsplash.com/photo-1764720573370-5008f1ccc9fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGNsYXNzcm9vbSUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzczNzYyNjUwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Tecnologia em sala de aula">
-                </div>
-
-                <div class="differential-list">
-                    <div class="differential-item">
-                        <div class="differential-icon blue-icon">
-                            <span>💻</span>
-                        </div>
-                        <div class="differential-content">
-                            <h3>Tecnologia em Sala de Aula</h3>
-                            <p>Utilizamos recursos tecnológicos modernos para tornar o aprendizado mais dinâmico e interativo, preparando nossos alunos para o mundo digital.</p>
-                        </div>
-                    </div>
-
-                    <div class="differential-item">
-                        <div class="differential-icon yellow-icon">
-                            <span>💡</span>
-                        </div>
-                        <div class="differential-content">
-                            <h3>Projetos Interdisciplinares</h3>
-                            <p>Promovemos a integração entre diferentes disciplinas através de projetos práticos que conectam teoria e realidade.</p>
-                        </div>
-                    </div>
-
-                    <div class="differential-item">
-                        <div class="differential-icon green-icon">
-                            <span>🎯</span>
-                        </div>
-                        <div class="differential-content">
-                            <h3>Foco no Desenvolvimento de Habilidades</h3>
-                            <p>Além do conteúdo acadêmico, desenvolvemos habilidades socioemocionais, pensamento crítico e capacidade de resolver problemas.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Notícias -->
+    <section id="noticias" class="fade-in">
+        <h2>Notícias e Eventos</h2>
+        <p>Fique por dentro das últimas novidades e acontecimentos do colégio</p>
     </section>
 
-    <!-- News Section -->
-    <section id="noticias" class="section news">
-        <div class="container">
-            <h2 class="section-title">Notícias e Eventos</h2>
-            <p class="section-subtitle">Fique por dentro das últimas novidades e acontecimentos do colégio</p>
-
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-category">Eventos</div>
-                    <h3>Feira de Ciências 2026</h3>
-                    <div class="news-date">
-                        <span>📅</span> 15 de Março, 2026
-                    </div>
-                    <p>Estudantes apresentam projetos inovadores na feira anual de ciências. Destaque para projetos de sustentabilidade e tecnologia.</p>
-                    <a href="#" class="news-link">Leia mais →</a>
-                </div>
-
-                <div class="news-card">
-                    <div class="news-category">Conquistas</div>
-                    <h3>Aprovações no ENEM</h3>
-                    <div class="news-date">
-                        <span>📅</span> 10 de Março, 2026
-                    </div>
-                    <p>Alunos do Colégio São Cristóvão conquistam excelentes resultados no ENEM 2025, com aprovações em universidades públicas.</p>
-                    <a href="#" class="news-link">Leia mais →</a>
-                </div>
-
-                <div class="news-card">
-                    <div class="news-category">Novidades</div>
-                    <h3>Nova Biblioteca Digital</h3>
-                    <div class="news-date">
-                        <span>📅</span> 5 de Março, 2026
-                    </div>
-                    <p>Inauguração da biblioteca digital com acesso a milhares de livros e recursos educacionais online para todos os alunos.</p>
-                    <a href="#" class="news-link">Leia mais →</a>
-                </div>
-            </div>
-        </div>
+    <!-- Contato -->
+    <section id="contato" class="fade-in">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contato" class="section contact">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <p class="section-subtitle">Estamos à disposição para esclarecer dúvidas e receber sua família</p>
-
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Informações de Contato</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <span>📍</span>
-                        </div>
-                        <div>
-                            <h4>Endereço</h4>
-                            <p>Rua São Cristóvão, 123<br>Centro - Cidade, Estado<br>CEP: 12345-678</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <span>📞</span>
-                        </div>
-                        <div>
-                            <h4>Telefone</h4>
-                            <p>(11) 1234-5678<br>(11) 98765-4321</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <span>✉️</span>
-                        </div>
-                        <div>
-                            <h4>E-mail</h4>
-                            <p>contato@saocristovao.edu.br<br>secretaria@saocristovao.edu.br</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <span>🕐</span>
-                        </div>
-                        <div>
-                            <h4>Horário de Atendimento</h4>
-                            <p>Segunda a Sexta: 7h às 18h<br>Sábado: 8h às 12h</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <h3>Envie uma Mensagem</h3>
-                    
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(11) 12345-6789">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Sua mensagem..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Colégio Estadual São Cristóvão</h3>
-                    <p>Educação de qualidade para formar cidadãos preparados para o futuro.</p>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Links Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#cursos">Cursos</a></li>
-                        <li><a href="#diferenciais">Diferenciais</a></li>
-                        <li><a href="#noticias">Notícias</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-icon facebook">f</a>
-                        <a href="#" class="social-icon instagram">📷</a>
-                        <a href="#" class="social-icon youtube">▶</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Colégio Estadual São Cristóvão. Todos os direitos reservados.</p>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2026 Colégio Estadual São Cristóvão. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
